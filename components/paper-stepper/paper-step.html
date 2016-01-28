@@ -1,0 +1,50 @@
+<link rel="import" href="../iron-validatable-behavior/iron-validatable-behavior.html">
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+
+@group Seed Elements
+@element paper-step
+@demo demo/index.html
+@hero hero.svg
+-->
+<dom-module id="paper-step">
+  <template>
+    <content></content>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+
+    is: 'paper-step',
+
+    behaviors: [
+      Polymer.IronValidatableBehavior
+    ],
+
+    properties: {
+      editable: {
+        type: Boolean,
+        value: false,
+        reflectToAttribute: true,
+        notify: true
+      },
+      label: {
+        type: String,
+        value: '',
+        notify: true
+      },
+      optional: {
+        type: Boolean,
+        value: false,
+        notify: true
+      },
+      opened: {
+        type: Boolean,
+        readOnly: true
+      }
+    }
+  });
+
+</script>
